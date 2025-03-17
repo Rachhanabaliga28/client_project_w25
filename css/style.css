@@ -1,0 +1,229 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* Responsive Design */
+    justify-self: center;
+}
+
+/* Skip to Main Content */
+.skip-link {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    position: absolute;
+    top: 0;
+}
+
+/* Navigation  */
+nav {
+    background: #00274C;
+    padding: 1rem;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    background: #004080;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+nav a.active {
+    background: #ffcc00;
+    color: #00274C;
+    font-weight: bold;
+    border: 2px solid #00274C;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+nav a.active::after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    font-size: 1.2rem;
+    color: #00274C;
+    font-weight: bold;
+}
+
+nav a:focus,
+nav a:hover {
+    outline: 3px solid #ffcc00;
+    text-decoration: underline;
+}
+
+/* Layout - Mobile First Grid (No Media Queries) */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header,
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Sections & Typography */
+h1,
+h2,
+h3 {
+    color: #00274C;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p,
+ul,
+li {
+    font-size: 1rem;
+}
+
+/* Other Services Section - 3 Column Grid */
+.caps-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 column grid is used */
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.service {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+}
+
+/* Ensure Service Links Stay Blue */
+.caps-services a {
+    color: #004080;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.caps-services a:visited {
+    color: #004080;
+}
+
+.caps-services a:hover,
+.caps-services a:focus {
+    text-decoration: underline;
+}
+
+/* Food Pantry Page - 2 Column Layout */
+.food-pantry-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: start;
+}
+
+.left-column,
+.right-column {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Ensure videos and images fit inside column */
+.food-pantry-grid iframe,
+.food-pantry-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Footer */
+footer {
+    background: #00274C;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: white;
+}
