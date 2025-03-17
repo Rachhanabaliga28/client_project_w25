@@ -28,6 +28,13 @@ img {
     justify-self: center;
 }
 
+.caps-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Skip to Main Content */
 .skip-link {
     position: absolute;
@@ -96,7 +103,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Layout - Mobile First Grid (No Media Queries) */
+/* Layout - Mobile First design */
 
 main {
     display: grid;
@@ -151,10 +158,9 @@ li {
 /* Other Services Section - 3 Column Grid */
 .caps-services {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 column grid is used */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     padding: 0;
-    list-style: none;
 }
 
 .service {
@@ -207,6 +213,41 @@ li {
 .food-pantry-grid img {
     max-width: 100%;
     height: auto;
+}
+
+/* Explore Key Resources Section */
+
+.key-resources h2 {
+    color: #00274C;
+    margin-bottom: 1rem;
+}
+
+.key-resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-resources ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    list-style-type: disc;
+}
+
+.key-resources a {
+    color: #004080;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.key-resources a:hover {
+    text-decoration: underline;
+}
+
+/* Sub-resources for better indentation */
+.sub-resources {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: #333;
 }
 
 
